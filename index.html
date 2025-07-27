@@ -1,15 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Impresiom3D Web</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Impresiom3D</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Google Tag Manager (replace 'GTM-XXXX' with your ID) -->
+    <!-- <script>console.log('GTM placeholder');</script> -->
+    <!-- End Google Tag Manager -->
+    <!-- Google Analytics (replace 'GA_MEASUREMENT_ID' with your ID) -->
+    <!-- <script>console.log('GA placeholder');</script> -->
+    <!-- End Google Analytics -->
+    <!-- Google Ads (replace 'AW-CONVERSION_ID' with your ID) -->
+    <!-- <script>console.log('Ads placeholder');</script> -->
+    <!-- End Google Ads -->
 </head>
-<body>
-    <h1>Welcome to Impresiom3D</h1>
-    <p>This is a placeholder landing page.</p>
+<body class="bg-gray-100 text-gray-800">
+    <header class="bg-white">
+        <div class="container mx-auto px-4 py-16 text-center">
+            <img src="logo.png" alt="Impresiom3D" class="mx-auto w-32 h-32 mb-4">
+            <h1 class="text-4xl font-bold mb-2">Impresiom3D</h1>
+            <p class="text-xl mb-6">Impresiones 3D de alta calidad</p>
+            <a href="#contacto" class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600">Solicitá tu presupuesto</a>
+        </div>
+    </header>
 
-    <script src="main.js"></script>
+    <a href="https://api.whatsapp.com/send?phone=5491112345678&text=Hola%20quiero%20un%20presupuesto" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <!-- Customize phone number and message above -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.558 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.337 11.89-11.893 11.89-1.99-.001-3.951-.5-5.725-1.452l-6.268 1.66zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.458-4.421-9.89-9.879-9.894-5.452 0-9.887 4.434-9.89 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.741-.979zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.03-.967-.272-.099-.47-.149-.669.149-.198.297-.767.967-.94 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.299-.495.099-.198.05-.372-.025-.521-.074-.148-.669-1.612-.916-2.214-.242-.583-.487-.502-.669-.512-.173-.008-.372-.01-.571-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.066 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.872.119.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.291.173-1.414z"/></svg>
+    </a>
+
+    <section id="servicios" class="py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold mb-4 text-center">Servicios</h2>
+            <ul class="list-disc list-inside space-y-2 max-w-md mx-auto">
+                <li>Impresiones 3D personalizadas</li>
+                <li>Diseño y modelado 3D</li>
+                <li>Prototipado rápido</li>
+                <li>Producción en serie de piezas</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="galeria" class="bg-white py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold mb-8 text-center">Galería</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <img src="https://via.placeholder.com/400x300?text=1" alt="Imagen 1" class="rounded shadow">
+                <img src="https://via.placeholder.com/400x300?text=2" alt="Imagen 2" class="rounded shadow">
+                <img src="https://via.placeholder.com/400x300?text=3" alt="Imagen 3" class="rounded shadow">
+                <img src="https://via.placeholder.com/400x300?text=4" alt="Imagen 4" class="rounded shadow">
+                <img src="https://via.placeholder.com/400x300?text=5" alt="Imagen 5" class="rounded shadow">
+                <img src="https://via.placeholder.com/400x300?text=6" alt="Imagen 6" class="rounded shadow">
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold mb-4 text-center">Contacto</h2>
+            <form id="contactForm" class="max-w-lg mx-auto space-y-4">
+                <div>
+                    <label class="block text-left">Nombre</label>
+                    <input type="text" name="name" required class="w-full border p-2 rounded">
+                </div>
+                <div>
+                    <label class="block text-left">Email</label>
+                    <input type="email" name="email" required class="w-full border p-2 rounded">
+                </div>
+                <div>
+                    <label class="block text-left">Mensaje</label>
+                    <textarea name="message" required class="w-full border p-2 rounded"></textarea>
+                </div>
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Enviar</button>
+                <p id="formSuccess" class="text-green-600 hidden">Mensaje enviado!</p>
+            </form>
+        </div>
+    </section>
+
+    <section id="ubicacion" class="bg-white py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold mb-4 text-center">Dónde estamos</h2>
+            <iframe class="w-full h-96 border-0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d0!2d0!3d0"></iframe>
+        </div>
+    </section>
+
+    <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        var form = this;
+        if (form.checkValidity()) {
+            document.getElementById('formSuccess').classList.remove('hidden');
+            form.reset();
+        }
+    });
+    </script>
 </body>
 </html>
