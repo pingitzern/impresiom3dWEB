@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Impresiom3D</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <!-- Google Tag Manager (replace 'GTM-XXXX' with your ID) -->
     <!-- <script>console.log('GTM placeholder');</script> -->
     <!-- End Google Tag Manager -->
@@ -15,13 +16,13 @@
     <!-- <script>console.log('Ads placeholder');</script> -->
     <!-- End Google Ads -->
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body class="text-gray-800">
     <header class="bg-white">
         <div class="container mx-auto px-4 py-16 text-center">
-            <img src="logo.png" alt="Impresiom3D" class="mx-auto w-32 h-32 mb-4">
+            <img src="img/img/logo impresion 3d OHM Instrumental.jpg" alt="Impresiom3D" class="logo mx-auto mb-4">
             <h1 class="text-4xl font-bold mb-2">Impresiom3D</h1>
             <p class="text-xl mb-6">Impresiones 3D de alta calidad</p>
-            <a href="#contacto" class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600">Solicitá tu presupuesto</a>
+            <a href="#contacto" class="btn-custom">Solicitá tu presupuesto</a>
         </div>
     </header>
 
@@ -45,13 +46,13 @@
     <section id="galeria" class="bg-white py-12">
         <div class="container mx-auto px-4">
             <h2 class="text-2xl font-bold mb-8 text-center">Galería</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                <img src="https://via.placeholder.com/400x300?text=1" alt="Imagen 1" class="rounded shadow">
-                <img src="https://via.placeholder.com/400x300?text=2" alt="Imagen 2" class="rounded shadow">
-                <img src="https://via.placeholder.com/400x300?text=3" alt="Imagen 3" class="rounded shadow">
-                <img src="https://via.placeholder.com/400x300?text=4" alt="Imagen 4" class="rounded shadow">
-                <img src="https://via.placeholder.com/400x300?text=5" alt="Imagen 5" class="rounded shadow">
-                <img src="https://via.placeholder.com/400x300?text=6" alt="Imagen 6" class="rounded shadow">
+            <div class="gallery grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <img src="img/img/2024-12-30_4a729c80418558.webp" alt="Impresión 1" class="rounded shadow fade-in">
+                <img src="img/img/2024-12-30_e0e8831473b9c.webp" alt="Impresión 2" class="rounded shadow fade-in">
+                <img src="img/img/2025-07-26_a4ce3117f201a.webp" alt="Impresión 3" class="rounded shadow fade-in">
+                <img src="img/img/2025-07-26_adb51aa8216518.webp" alt="Impresión 4" class="rounded shadow fade-in">
+                <img src="img/img/2025-07-26_d4f7b99bc447c8.webp" alt="Impresión 5" class="rounded shadow fade-in">
+                <img src="img/img/2025-07-26_d6f7c77e89c21.webp" alt="Impresión 6" class="rounded shadow fade-in">
             </div>
         </div>
     </section>
@@ -72,7 +73,7 @@
                     <label class="block text-left">Mensaje</label>
                     <textarea name="message" required class="w-full border p-2 rounded"></textarea>
                 </div>
-                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Enviar</button>
+                <button type="submit" class="btn-custom">Enviar</button>
                 <p id="formSuccess" class="text-green-600 hidden">Mensaje enviado!</p>
             </form>
         </div>
@@ -85,15 +86,6 @@
         </div>
     </section>
 
-    <script>
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        var form = this;
-        if (form.checkValidity()) {
-            document.getElementById('formSuccess').classList.remove('hidden');
-            form.reset();
-        }
-    });
-    </script>
+    <script src="main.js"></script>
 </body>
 </html>
