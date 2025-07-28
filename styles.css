@@ -1,69 +1,220 @@
 :root {
-    --primary: #80618C; /* extracted from logo */
-    --secondary: #D8ACD4;
-    --dark: #404040;
-    --light: #ffffff;
+    --bg: #121212;
+    --card-bg: #1e1e1e;
+    --accent: #e10098;
+    --text: #f5f5f5;
+    --font: 'Poppins', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: var(--secondary);
-    color: var(--dark);
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Header */
+.header {
+    background: #0d0d0d;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.nav a {
+    margin-left: 2rem;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color .3s;
+}
+.nav a:hover {
+    color: var(--accent);
+}
+.logo img {
+    height: 50px;
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    color: #fff;
+    padding: 12px 14px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,.3);
+    transition: background .3s;
+}
+.whatsapp:hover {
+    background: #1ebe5d;
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('/img/hero-bg.jpg') center/cover no-repeat;
+    padding: 8rem 0;
     text-align: center;
 }
-
-h1 {
-    margin-top: 50px;
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
 }
 
-header {
-    background-color: var(--primary);
-    color: var(--light);
+.btn {
+    background: var(--accent);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background .3s;
+}
+.btn:hover {
+    background: #c4007e;
 }
 
-.logo {
-    width: 8rem;
-    height: auto;
+/* Services */
+.services {
+    padding: 4rem 0;
+}
+.services h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+.card {
+    background: var(--card-bg);
+    padding: 2rem 1rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform .3s, box-shadow .3s;
+}
+.card i {
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-/* Map iframe takes full width with fixed height */
-.map-iframe {
-    width: 100%;
-    height: 450px;
-    border: 0;
+/* Gallery */
+.gallery {
+    padding: 4rem 0;
 }
-
-/* Custom primary button color scheme */
-.btn-custom {
-    background-color: var(--primary);
-    color: var(--light);
-    padding: 0.5rem 1rem;
-    border-radius: 0.25rem;
-    transition: background-color 0.3s ease;
+.gallery h2 {
+    text-align: center;
+    margin-bottom: 2rem;
 }
-
-.btn-custom:hover {
-    background-color: #60496a; /* slightly darker */
+.gallery .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap: 1rem;
 }
-
-/* Gallery image hover effects */
 .gallery img {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    transition: transform .3s;
 }
-
 .gallery img:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Fade-in animation for elements */
-.fade-in {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+/* Contact */
+.contact {
+    padding: 4rem 0;
+    background: #0d0d0d;
+}
+.contact h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+#contactForm {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+#contactForm input,
+#contactForm textarea {
+    padding: 0.75rem;
+    border-radius: 4px;
+    border: 1px solid #444;
+    background: #222;
+    color: var(--text);
+}
+#contactForm textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+#contactForm button {
+    align-self: center;
+}
+.hidden {
+    display: none;
 }
 
-.fade-in.show {
-    opacity: 1;
+/* Footer */
+.footer {
+    background: #000;
+    color: #888;
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 0.875rem;
+}
+.social {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.social a {
+    color: #888;
+    transition: color .3s;
+    font-size: 1.2rem;
+}
+.social a:hover {
+    color: var(--accent);
+}
+
+@media (max-width: 768px) {
+    .nav a {
+        margin-left: 1rem;
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
 }
