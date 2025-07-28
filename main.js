@@ -1,34 +1,27 @@
-// Simple placeholder script
+// Main interactions
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Impresiom3D page loaded');
 
-    const form = document.querySelector('form');
-    if (!form) {
-        return;
-    }
+    // Fade-in effect for elements with .fade-in
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
 
-    const showMessage = (message) => {
-        // Using alert for simplicity as there is no designated container
-        alert(message);
-    };
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-    form.addEventListener('submit', (event) => {
+    const form = document.getElementById('contactForm');
+    if (!form) return;
+
+    form.addEventListener('submit', event => {
         event.preventDefault();
-
-        const name = form.querySelector('[name="name"]');
-        const email = form.querySelector('[name="email"]');
-        const phone = form.querySelector('[name="phone"]');
-        const messageField = form.querySelector('[name="message"]');
-
-        const allFilled = name && email && phone && messageField &&
-            name.value.trim() && email.value.trim() && phone.value.trim() && messageField.value.trim();
-
-        if (!allFilled) {
-            showMessage('Please fill in all required fields.');
-            return;
+        if (form.checkValidity()) {
+            document.getElementById('formSuccess').classList.remove('hidden');
+            form.reset();
         }
-
-        showMessage('Form submitted successfully!');
-        form.reset();
     });
 });

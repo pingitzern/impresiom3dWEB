@@ -1,14 +1,31 @@
+:root {
+    --primary: #80618C; /* extracted from logo */
+    --secondary: #D8ACD4;
+    --dark: #404040;
+    --light: #ffffff;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: var(--secondary);
+    color: var(--dark);
     text-align: center;
 }
 
 h1 {
     margin-top: 50px;
+}
+
+header {
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+.logo {
+    width: 8rem;
+    height: auto;
 }
 
 /* Map iframe takes full width with fixed height */
@@ -20,12 +37,33 @@ h1 {
 
 /* Custom primary button color scheme */
 .btn-custom {
-    background-color: #ff6600; /* Primary orange */
-    color: #fff;
+    background-color: var(--primary);
+    color: var(--light);
     padding: 0.5rem 1rem;
     border-radius: 0.25rem;
+    transition: background-color 0.3s ease;
 }
 
 .btn-custom:hover {
-    background-color: #e65c00; /* Darker on hover */
+    background-color: #60496a; /* slightly darker */
+}
+
+/* Gallery image hover effects */
+.gallery img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Fade-in animation for elements */
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade-in.show {
+    opacity: 1;
 }
