@@ -3,88 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Impresiom3D</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Impresión 3D OHM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <!-- Google Tag Manager (replace 'GTM-XXXX' with your ID) -->
-    <!-- <script>console.log('GTM placeholder');</script> -->
-    <!-- End Google Tag Manager -->
-    <!-- Google Analytics (replace 'GA_MEASUREMENT_ID' with your ID) -->
-    <!-- <script>console.log('GA placeholder');</script> -->
-    <!-- End Google Analytics -->
-    <!-- Google Ads (replace 'AW-CONVERSION_ID' with your ID) -->
-    <!-- <script>console.log('Ads placeholder');</script> -->
-    <!-- End Google Ads -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" defer></script>
 </head>
-<body class="text-gray-800">
-    <header class="bg-white">
-        <div class="container mx-auto px-4 py-16 text-center">
-            <img src="img/img/logo impresion 3d OHM Instrumental.jpg" alt="Impresiom3D" class="logo mx-auto mb-4">
-            <h1 class="text-4xl font-bold mb-2">Impresiom3D</h1>
-            <p class="text-xl mb-6">Impresiones 3D de alta calidad</p>
-            <a href="#contacto" class="btn-custom">Solicitá tu presupuesto</a>
+<body>
+    <header class="header">
+        <div class="container flex-between">
+            <a href="#hero" class="logo"><img src="img/logo.png" alt="Impresión 3D OHM"></a>
+            <nav class="nav">
+                <a href="#hero">Inicio</a>
+                <a href="#services">Servicios</a>
+                <a href="#gallery">Galería</a>
+                <a href="#contact">Contacto</a>
+            </nav>
+            <a href="https://wa.me/5491112345678" class="whatsapp" target="_blank" aria-label="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
         </div>
     </header>
 
-    <a href="https://api.whatsapp.com/send?phone=5491112345678&text=Hola%20quiero%20un%20presupuesto" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600" target="_blank" rel="noopener" aria-label="WhatsApp">
-        <!-- Customize phone number and message above -->
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.558 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.337 11.89-11.893 11.89-1.99-.001-3.951-.5-5.725-1.452l-6.268 1.66zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.458-4.421-9.89-9.879-9.894-5.452 0-9.887 4.434-9.89 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.741-.979zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.03-.967-.272-.099-.47-.149-.669.149-.198.297-.767.967-.94 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.299-.495.099-.198.05-.372-.025-.521-.074-.148-.669-1.612-.916-2.214-.242-.583-.487-.502-.669-.512-.173-.008-.372-.01-.571-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.066 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.872.119.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.291.173-1.414z"/></svg>
-    </a>
-
-    <section id="servicios" class="py-12">
-        <div class="container mx-auto px-4">
-            <h2 class="text-2xl font-bold mb-4 text-center">Servicios</h2>
-            <ul class="list-disc list-inside space-y-2 max-w-md mx-auto">
-                <li>Impresiones 3D personalizadas</li>
-                <li>Diseño y modelado 3D</li>
-                <li>Prototipado rápido</li>
-                <li>Producción en serie de piezas</li>
-            </ul>
+    <section class="hero" id="hero">
+        <div class="container hero-content">
+            <h1>Transformamos tus ideas en objetos reales.</h1>
+            <p>Servicio de impresión 3D para estudiantes, empresas, makers y más.</p>
+            <a href="#contact" class="btn">Solicitar presupuesto</a>
         </div>
     </section>
 
-    <section id="galeria" class="bg-white py-12">
-        <div class="container mx-auto px-4">
-            <h2 class="text-2xl font-bold mb-8 text-center">Galería</h2>
-            <div class="gallery grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                <img src="img/img/2024-12-30_4a729c80418558.webp" alt="Impresión 1" class="rounded shadow fade-in">
-                <img src="img/img/2024-12-30_e0e8831473b9c.webp" alt="Impresión 2" class="rounded shadow fade-in">
-                <img src="img/img/2025-07-26_a4ce3117f201a.webp" alt="Impresión 3" class="rounded shadow fade-in">
-                <img src="img/img/2025-07-26_adb51aa8216518.webp" alt="Impresión 4" class="rounded shadow fade-in">
-                <img src="img/img/2025-07-26_d4f7b99bc447c8.webp" alt="Impresión 5" class="rounded shadow fade-in">
-                <img src="img/img/2025-07-26_d6f7c77e89c21.webp" alt="Impresión 6" class="rounded shadow fade-in">
+    <section class="services" id="services">
+        <div class="container">
+            <h2>Servicios</h2>
+            <div class="cards">
+                <div class="card">
+                    <i class="fas fa-cubes"></i>
+                    <h3>Impresión 3D FDM</h3>
+                    <p>Producción rápida y precisa en diversos materiales.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-pencil-ruler"></i>
+                    <h3>Diseño 3D</h3>
+                    <p>Modelado personalizado para tus proyectos.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-comments"></i>
+                    <h3>Asesoramiento</h3>
+                    <p>Acompañamiento técnico desde la idea hasta el prototipo.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-shipping-fast"></i>
+                    <h3>Entrega rápida</h3>
+                    <p>Recibí tus piezas a tiempo y sin demoras.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="contacto" class="py-12">
-        <div class="container mx-auto px-4">
-            <h2 class="text-2xl font-bold mb-4 text-center">Contacto</h2>
-            <form id="contactForm" class="max-w-lg mx-auto space-y-4">
-                <div>
-                    <label class="block text-left">Nombre</label>
-                    <input type="text" name="name" required class="w-full border p-2 rounded">
-                </div>
-                <div>
-                    <label class="block text-left">Email</label>
-                    <input type="email" name="email" required class="w-full border p-2 rounded">
-                </div>
-                <div>
-                    <label class="block text-left">Mensaje</label>
-                    <textarea name="message" required class="w-full border p-2 rounded"></textarea>
-                </div>
-                <button type="submit" class="btn-custom">Enviar</button>
-                <p id="formSuccess" class="text-green-600 hidden">Mensaje enviado!</p>
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2>Galería</h2>
+            <div class="grid">
+                <img src="img/trabajo1.jpg" alt="Trabajo 1">
+                <img src="img/trabajo2.jpg" alt="Trabajo 2">
+                <img src="img/trabajo3.jpg" alt="Trabajo 3">
+                <img src="img/trabajo4.jpg" alt="Trabajo 4">
+                <img src="img/trabajo5.jpg" alt="Trabajo 5">
+                <img src="img/trabajo6.jpg" alt="Trabajo 6">
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Contacto</h2>
+            <form id="contactForm">
+                <input type="text" name="name" placeholder="Nombre" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="tel" name="phone" placeholder="Teléfono" required>
+                <textarea name="message" placeholder="Mensaje" required></textarea>
+                <button type="submit" class="btn">Enviar</button>
+                <p id="formSuccess" class="hidden">Mensaje enviado!</p>
             </form>
         </div>
     </section>
 
-    <section id="ubicacion" class="bg-white py-12">
-        <div class="container mx-auto px-4">
-            <h2 class="text-2xl font-bold mb-4 text-center">Dónde estamos</h2>
-            <iframe class="w-full h-96 border-0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d0!2d0!3d0"></iframe>
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Impresión 3D OHM - Todos los derechos reservados.</p>
+            <ul class="social">
+                <li><a href="mailto:info@impresion3dohm.com" aria-label="Email"><i class="fas fa-envelope"></i></a></li>
+                <li><a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://wa.me/5491112345678" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
+            </ul>
         </div>
-    </section>
+    </footer>
 
     <script src="main.js"></script>
 </body>

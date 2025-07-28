@@ -1,27 +1,23 @@
-// Main interactions
+// Basic interactions
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('Impresiom3D page loaded');
-
-    // Fade-in effect for elements with .fade-in
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('show');
-                observer.unobserve(entry.target);
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', function(e) {
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({behavior: 'smooth'});
             }
         });
-    }, { threshold: 0.1 });
+    });
 
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
+    // Simple contact form handling
     const form = document.getElementById('contactForm');
-    if (!form) return;
-
-    form.addEventListener('submit', event => {
-        event.preventDefault();
-        if (form.checkValidity()) {
+    if (form) {
+        form.addEventListener('submit', e => {
+            e.preventDefault();
             document.getElementById('formSuccess').classList.remove('hidden');
             form.reset();
-        }
-    });
+        });
+    }
 });
